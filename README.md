@@ -17,9 +17,23 @@ Questo progetto crea un **sito web calcolatore** usando:
 2. Verifica di avere i workload:
    - **ASP.NET and web development**
    - **Desktop development with C++**
-3. Compila prima `NativeCalculator` (x64).
-4. Copia `NativeCalculator.dll` nella cartella di output di `WebCalculator` (es. `WebCalculator\\bin\\Debug\\net8.0`).
-5. Avvia `WebCalculator` come startup project.
+3. Imposta la soluzione su **x64**.
+4. Compila `NativeCalculator` (Debug o Release x64).
+5. Copia `NativeCalculator.dll` nella cartella di output di `WebCalculator` (es. `WebCalculator\\bin\\Debug\\net8.0`) oppure nella cartella da cui avvii il processo web.
+6. Avvia `WebCalculator` come startup project.
+
+## Risoluzione errore "Unable to load DLL 'NativeCalculator'"
+
+Se compare l'errore `Unable to load DLL 'NativeCalculator' ... (0x8007007E)`, significa che la DLL non è in un percorso risolvibile dal processo web o manca una sua dipendenza C++ runtime.
+
+Controlli rapidi:
+
+1. Conferma che `NativeCalculator.dll` esista davvero.
+2. Copia la DLL vicino a `WebCalculator.exe`/`dotnet` output (`bin\\...\\net8.0`).
+3. Assicurati che architettura sia coerente: **web x64 + DLL x64**.
+4. Installa il **Microsoft Visual C++ Redistributable** se necessario.
+
+> Nota: se la DLL non viene trovata, l'app usa automaticamente un fallback C# per non bloccare il calcolo.
 
 ## Note
 
