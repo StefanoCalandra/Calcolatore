@@ -39,3 +39,12 @@ Controlli rapidi:
 
 - La divisione per zero in C++ ritorna `NaN`; l'API risponde con errore leggibile.
 - Lato browser, il calcolo viene inviato a `POST /api/calculator/calculate`.
+
+
+## Migliorie UX incluse
+
+- Tasto **Invio** per calcolare rapidamente.
+- Tasto **Esc** e pulsante **C** per azzerare i campi.
+- Pulsante **⌫** per cancellare l'ultimo carattere del campo attivo.
+- Validazione client-side con evidenziazione campo invalido.
+- Storico delle ultime 10 operazioni.

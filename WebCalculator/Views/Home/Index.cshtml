@@ -30,8 +30,18 @@
             <input id="right" type="number" step="any" value="0" />
         </div>
 
-        <button id="calcBtn">Calcola</button>
+        <div class="actions">
+            <button id="calcBtn" type="button">Calcola</button>
+            <button id="clearBtn" type="button" class="secondary">C</button>
+            <button id="backspaceBtn" type="button" class="secondary">⌫</button>
+        </div>
+
         <p id="output" aria-live="polite"></p>
+
+        <section class="history-panel" aria-labelledby="history-title">
+            <h2 id="history-title">Storico operazioni</h2>
+            <ul id="history"></ul>
+        </section>
     </main>
 
     <script src="~/js/site.js"></script>

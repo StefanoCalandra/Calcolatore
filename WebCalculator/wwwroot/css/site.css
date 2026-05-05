@@ -20,6 +20,12 @@ body {
     margin-bottom: 1rem;
 }
 
+.actions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
 input,
 select,
 button {
@@ -27,7 +33,26 @@ button {
     font-size: 1rem;
 }
 
+.secondary {
+    background: #e8ecf5;
+    border: 1px solid #c6cfde;
+}
+
 #output {
     margin-top: 1rem;
     font-weight: bold;
+}
+
+.history-panel {
+    margin-top: 1.5rem;
+}
+
+#history {
+    margin: 0.5rem 0 0;
+    padding-left: 1.2rem;
+}
+
+.field-error {
+    border: 2px solid #d13030;
+    outline: none;
 }
