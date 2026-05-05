@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Calcolatore C++ + C#";
+}
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <main class="container">
+        <h1>Calcolatore Web (C++ + C#)</h1>
+        <p>Frontend web + backend ASP.NET (C#) + motore nativo C++.</p>
+
+        <div class="grid">
+            <label for="left">Primo numero</label>
+            <input id="left" type="number" step="any" value="0" />
+
+            <label for="op">Operatore</label>
+            <select id="op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+
+            <label for="right">Secondo numero</label>
+            <input id="right" type="number" step="any" value="0" />
+        </div>
+
+        <div class="actions">
+            <button id="calcBtn" type="button">Calcola</button>
+            <button id="clearBtn" type="button" class="secondary">C</button>
+            <button id="backspaceBtn" type="button" class="secondary">⌫</button>
+        </div>
+
+        <p id="output" aria-live="polite"></p>
+
+        <section class="history-panel" aria-labelledby="history-title">
+            <h2 id="history-title">Storico operazioni</h2>
+            <ul id="history"></ul>
+        </section>
+    </main>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
